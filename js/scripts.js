@@ -17,8 +17,8 @@ function rollDie(){
 $(document).ready(function(){
   $('#user1-throw').click(function(event){
     event.preventDefault();
-    $('#outcome').text(rollDie());
-//  document.getElementById("#outcome").innerHTML = rollDie();
+    $('#outcome1').text(rollDie());
+    $('#outcome2').text(rollDie());
 
   //  $("#outcome").append(rollDie());
   //  $("li#outcome").val("");
