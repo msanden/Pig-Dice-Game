@@ -28,3 +28,20 @@ $(document).ready(function() {
     $('#main').toggle();
     $('#console-one-hidden').toggle();
   });
+  //initialize userOne and userOne front-panel//
+  var userOne = new User(0, 0);
+
+  $("#user-one-throw").click(function() {
+    var newRoll = die();
+    $(".userOneRoll").text(newRoll);
+
+    if (newRoll !== 1) {
+      userOne.myRunAcc(newRoll);
+      $(".userOneRunAcc").text(userOne.myRun + ' Points');
+    } else {
+      userOne.myRun = 0;
+      $(".userOneRunAcc").text(userOne.myRun + ' Points');
+      $("#console-one-hidden").toggle();
+      $("#switch-one-hidden").toggle();
+    }
+  });
