@@ -29,24 +29,36 @@
         </div>
 
         <br><br><br>
-
-
-
-            <div class="panel panel-default">
-          <div class="panel-body panel-heading">
-
-
-            <div class="form-group">
-              <label for="player2">Player 2</label><br>
-              <input type="button" id="user2-throw" value="Roll!"><br>
-              <span id="displayUser2Roll"></span><br><br>
-              <label for="user2Score">Your Score</label><br>
-              <span id="user2Total"></span>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="text-center">
+              <h3><input class="btn btn-primary" id="user-one-throw"
+                type="button" value="Roll Die"></h3>
             </div>
+            <h1 class="text-center"> <span class="userOneRoll"></span> </h1>
+            <div class="text-center">
+              <h3><span class="label label-success">Your Run</span></h3>
+            </div>
+            <h1 class="text-center"> <span class="userOneRunAcc"></span> </h1>
           </div>
+
+          <div class="col-md-6">
+            <div class="text-center">
+              <h3><input class="btn btn-primary" id="userOneHold"
+                type="button" value="Hold Run"></h3>
+            </div>
+            <h1 class="text-center"> <span class="userOneScore"></span> </h1>
           </div>
-          </div>
-        </form>
+
+        </div>
+      </div>
+
+      <div id="switch-one-hidden">
+        <img src="img/dice.jpg" alt="http://www.hawking.org.uk/does-god-play-dice.html">
+        <h3><span class="label label-warning">You Rolled a ONE</span></h3>
+        <h3><input type="button" value="Switch User"
+          id="switch-one" class="btn btn-info"></h3>
       </div>
 
 
