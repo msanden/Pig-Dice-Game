@@ -11,3 +11,17 @@
   text-align: center;
   color:white;
 }
+
+#console-two-hidden {
+  display: none;
+  font-family: fantasy;
+  text-align: center;
+  color:white;
+}
+
+#switch-two-hidden{
+  display: none;
+  font-family: fantasy;
+  text-align: center;
+  color:white;
+}
