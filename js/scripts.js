@@ -1,36 +1,22 @@
+//Business Logic//
 
-
-//var user1Scores = [];
-//var reset = 0;
-
-/*
-user1Scores.push(rollDie());
-user1Scores.forEach(function(user1Score) {
-  total1 += user1Score;
-});
-$('#total1').text(total1);
-*/
-//random number generator
-function rollDie(){
-  return Math.floor((Math.random()*6)+1);
+//die: random number generator//
+function die() {
+  return Math.floor((Math.random() * 6) + 1);
 }
 
-var myRuns = [];
+//User object with your run and score properties//
+function User(myRun, myScore) {
+  this.myRun = myRun;
+  this.myScore = myScore;
+}
 
-var userRuns = myRuns.push(rollDie());
+//User object prototype that tallys your run with each roll of the die//
+User.prototype.myRunAcc = function(roll) {
+  this.myRun = this.myRun + roll;
+}
 
-//user-logic display throw on html
-$(document).ready(function(){
-
-  $('#user1-throw').click(function(event){
-    $('#displayUser1Roll').text('You rolled a '+ rollDie() );
-    event.preventDefault();
-  });
-  //an array to collect the run
-
-  $('#user2-throw').click(function(event){
-    $('#displayUser2Roll').text('You rolled a '+ rollDie() );
-    event.preventDefault();
-  });
-
-  });
+//User object prototype that tallys your sequence of runs to give your game score//
+User.prototype.hold = function(hold) {
+  this.myScore = this.myScore + this.myRun;
+}
