@@ -62,3 +62,39 @@ $(document).ready(function() {
       $('#switch-one-hidden').toggle();
       $('#console-two-hidden').toggle();
     });
+    //initialize userTwo and userTwo front-panel//
+    var userTwo = new User(0, 0);
+
+    $("#user-two-throw").click(function() {
+      var newRoll = die();
+      $(".userTwoRoll").text(newRoll);
+
+      if (newRoll !== 1) {
+        userTwo.myRunAcc(newRoll);
+        $(".userTwoRunAcc").text(userTwo.myRun + ' Points');
+      } else {
+        userTwo.myRun = 0;
+        $(".userTwoRunAcc").text(userTwo.myRun + ' Points');
+        $("#console-two-hidden").toggle();
+        $("#switch-two-hidden").toggle();
+      }
+    });
+
+    $("#userTwoHold").click(function() {
+      userTwo.hold();
+      userTwo.myRun = 0;
+      if (userTwo.myScore > 99) {
+        alert('You win!');
+      } else {
+        $(".userTwoScore").text('Score ' + userTwo.myScore);
+        $("#console-two-hidden").toggle();
+        $('#console-one-hidden').fadeToggle(2000);
+      }
+    });
+    
+    //initialize user-one-switch if ONE is rolled//
+    $('#switch-two').click(function() {
+      $('#switch-two-hidden').toggle();
+      $('#console-one-hidden').toggle();
+    });
+  });
