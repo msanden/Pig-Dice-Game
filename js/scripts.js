@@ -45,3 +45,20 @@ $(document).ready(function() {
       $("#switch-one-hidden").toggle();
     }
   });
+
+  $("#userOneHold").click(function() {
+      userOne.hold();
+      userOne.myRun = 0;
+      if (userOne.myScore > 99) {
+        alert('You Win!');
+      } else {
+        $(".userOneScore").text('Score ' + userOne.myScore);
+        $("#console-one-hidden").toggle();
+        $('#console-two-hidden').fadeToggle(2000);
+      }
+    });
+    //initialize user-two-switch if ONE is rolled//
+    $('#switch-one').click(function() {
+      $('#switch-one-hidden').toggle();
+      $('#console-two-hidden').toggle();
+    });
