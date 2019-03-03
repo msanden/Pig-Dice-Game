@@ -20,3 +20,11 @@ User.prototype.myRunAcc = function(roll) {
 User.prototype.hold = function(hold) {
   this.myScore = this.myScore + this.myRun;
 }
+
+//User Interface Logic//
+//toggle from landing page to userOne's controls//
+$(document).ready(function() {
+  $('#game-console').click(function() {
+    $('#main').toggle();
+    $('#console-one-hidden').toggle();
+  });
