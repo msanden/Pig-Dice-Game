@@ -23,7 +23,7 @@ A player rolls a die repeatedly on each turn until they decide to "hold" or they
 No known bugs.
 
 ## Support and contact details
-Open [issue](https://github.com/msanden/Pig-Dice-Game/issues) or follow me on [Github](https://github.com/msanden).
+Contribute to my code [here](https://github.com/msanden/Pig-Dice-Game/issues) or follow me on [Github](https://github.com/msanden).
 
 ### License
 *MIT License*
