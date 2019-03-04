@@ -50,7 +50,10 @@ $(document).ready(function() {
       userOne.hold();
       userOne.myRun = 0;
       if (userOne.myScore > 99) {
-        alert('You Win!');
+        userOne.hold();
+        $(".userOneScore").text('Score ' + userOne.myScore);
+        $("#console-one-hidden").toggle(2000);
+        $("#one-hidden-winner").toggle();
       } else {
         $(".userOneScore").text('Score ' + userOne.myScore);
         $("#console-one-hidden").toggle();
@@ -84,14 +87,17 @@ $(document).ready(function() {
       userTwo.hold();
       userTwo.myRun = 0;
       if (userTwo.myScore > 99) {
-        alert('You win!');
+        userTwo.hold();
+        $(".userTwoScore").text('Score ' + userTwo.myScore);
+        $("#console-two-hidden").toggle(2000);
+        $("#two-hidden-winner").toggle();
       } else {
         $(".userTwoScore").text('Score ' + userTwo.myScore);
         $("#console-two-hidden").toggle();
         $('#console-one-hidden').fadeToggle(2000);
       }
     });
-    
+
     //initialize user-one-switch if ONE is rolled//
     $('#switch-two').click(function() {
       $('#switch-two-hidden').toggle();
