@@ -38,3 +38,25 @@ body {
   text-align: center;
   color:white;
 }
+
+#one-hidden-winner {
+  display: none;
+  font-family: fantasy;
+  text-align: center;
+}
+
+#two-hidden-winner {
+  display: none;
+  font-family: fantasy;
+  text-align: center;
+}
+
+.board {
+  text-align: center;
+  color: white;
+  font-family: fantasy;
+}
+
+.well {
+  background-color: #884EA0;
+}
