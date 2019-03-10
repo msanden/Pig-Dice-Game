@@ -20,7 +20,7 @@ A player rolls a die repeatedly on each turn until they decide to "hold" or they
 | Declares first player to score 100 points winner        |                    
 
 ## Support and contact details
-The application has no known bugs. However, contribute or report any issue you encounter [here]https://github.com/msanden/Pig-Dice-Game/issues).
+The application has no known bugs. However, contribute or report any issue you encounter [here](https://github.com/msanden/Pig-Dice-Game/issues).
 
 ### License
 MIT License
